@@ -1,0 +1,43 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e6f0ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    color: #00264d; /* Dark navy blue text */
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #004080, #0073e6); /* Dark to lighter blue */
+    color: white;
+    padding: 20px 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery .item {
+    background: #f0f6ff; /* Very light blue card background */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    max-width: 250px;
+    border: 2px solid #004080;
+}
+
+.gallery h3 {
+    color: #004080; /* Dark blue heading */
+}
+
+footer {
+    background: #004080; /* Dark blue footer */
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
