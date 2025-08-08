@@ -1,89 +1,60 @@
-🍦 Ice Cream Store – Node.js + Docker + AWS EC2
-📜 Overview
-This project is a Node.js application that can be deployed using Docker on AWS EC2.
+# 🍦 Ice Cream Store – Node.js + Docker + AWS EC2
+
+## 📜 Overview
+This project is a Node.js application that can be deployed using Docker on AWS EC2.  
 This guide outlines the steps to set up the project locally and deploy it to AWS.
 
-✅ Prerequisites
-🖥 Node.js – Download and install
+## ✅ Prerequisites
+- 🖥 **Node.js** – Download and install  
+- 📦 **NPM** – Comes bundled with Node.js (ensure it’s updated)  
+- 🐳 **Docker** – Install Docker Desktop  
+- ☁ **AWS Account** – To launch EC2 instances  
+- 📤 **DockerHub Account** – To push and store Docker images  
 
-📦 NPM – Comes bundled with Node.js (ensure it’s updated)
 
-🐳 Docker – Install Docker Desktop
+## 💻 Local Setup
 
-☁ AWS Account – To launch EC2 instances
-
-📤 DockerHub Account – To push and store Docker images
-
-💻 Local Setup
-1️⃣ Setup Node.js Application
-Open your terminal and navigate to your project directory:
-
-bash
-Copy
-Edit
+### 1️⃣ Setup Node.js Application  
+Open your terminal and navigate to your project directory, then run:
 npm init -y
 npm install express
-2️⃣ Run the Application
-Start the Node.js app:
 
-bash
-Copy
-Edit
+2️⃣ Run the Application
+Start the Node.js app with:
 node app.js
 Your application will be running at:
 🌐 http://localhost:3000
 
 🚀 Deployment Steps
 1️⃣ Create Docker Image
-bash
-Copy
-Edit
-docker build -t <your-dockerhub-username>/ice-cream-store .
+docker build -t sandyzayn/ice-cream-store .
+
 2️⃣ Push Image to DockerHub
-bash
-Copy
-Edit
 docker login
-docker push <your-dockerhub-username>/ice-cream-store
+docker push sandyzayn/ice-cream-store
+
 3️⃣ Create AWS EC2 Instance
 Log in to AWS Management Console
-
 Launch a new EC2 instance (Amazon Linux 2 / Ubuntu)
-
 Allow port 3000 in the Security Group
 
 4️⃣ Install Docker on AWS EC2 Instance
 SSH into your instance:
+ssh -i "DevOps.pem" ec2-user@ec2-3-15-184-109.us-east-2.compute.amazonaws.com
 
-bash
-Copy
-Edit
-ssh -i "YourKey.pem" ec2-user@<EC2-Public-IP>
 Install Docker:
-
-bash
-Copy
-Edit
 sudo yum update -y
 sudo yum install docker -y
 sudo service docker start
-sudo usermod -aG docker ec2-user
-(Logout and log back in for permissions to take effect)
 
 5️⃣ Pull the Docker Image
-bash
-Copy
-Edit
-docker pull <your-dockerhub-username>/ice-cream-store
-6️⃣ Run the Container with Port Binding
-bash
-Copy
-Edit
-docker run -d -p 3000:3000 <your-dockerhub-username>/ice-cream-store
-7️⃣ Access Your Website
-Open your browser and go to:
+docker pull sandyzayn/ice-cream-store
 
-cpp
-Copy
-Edit
-http://<EC2-Public-IP>:3000
+6️⃣ Run the Container with Port Binding
+docker run -d -p 80:3000 sandyzayn/ice-cream-store
+The inbound rules of HTTP set to 80 
+
+7️⃣ Access Your Website
+Open your browser and navigate to:
+🌐 http://3.15.184.109/:3000
+or else we can directly use http://3.15.184.109/
