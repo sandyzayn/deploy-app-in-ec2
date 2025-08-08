@@ -15,10 +15,11 @@ This guide outlines the steps to set up the project locally and deploy it to AWS
 ## 💻 Local Setup
 
 ### 1️⃣ Setup Node.js Application  
-Open your terminal and navigate to your project directory, then run: __
+Open your terminal and navigate to your project directory, then run: 
+```
 npm init -y
 npm install express
-
+```
 **2️⃣ Run the Application**
 Start the Node.js app with:
 node app.js
