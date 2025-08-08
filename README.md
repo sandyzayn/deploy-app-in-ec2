@@ -68,3 +68,11 @@ Open your browser and navigate to:
 🌐 http://3.15.184.109/:3000
 or else we can directly use http://3.15.184.109/
 ```
+**IMAGES SHOWS THE PROOF OF EXECUTION THAT RUN BOTH 3000 AND AS WELL AS IN PUBLIC IP OF EC2**
+<img width="1913" height="821" alt="Image" src="https://github.com/user-attachments/assets/abb01392-ddb1-490a-b8e9-e8bac6aecdd1" />
+
+<img width="1891" height="905" alt="Image" src="https://github.com/user-attachments/assets/45e5e616-f07f-47cd-aed8-6df6ba15a9b5" />
+
+<img width="1568" height="723" alt="Image" src="https://github.com/user-attachments/assets/598e033a-a8ee-4d4b-847f-79ad6fa2c5f3" />
+
+<img width="1910" height="833" alt="Image" src="https://github.com/user-attachments/assets/68dc4f1f-16b2-47ed-ad2c-b5a63379f135" />
